@@ -1,8 +1,8 @@
 {
-  "name": "ng2-tree-ap68",
-  "version": "2.0.1-rc.12",
+  "name": "ng2-tree-ap68a",
+  "version": "2.0.1-rc.111",
   "description":
-    "angular2 component for visualizing data that can be naturally represented as a tree. // FORKED change since tests fail when we have a menu on static currently, not sure yet how to change that // TODO: adjust test",
+    "// FORKED from ng2-tree@2.0.0-rc.11, changed since tests fail when we have a menu on static currently, not sure yet how to change that // TODO: adjust test",
   "main": "index.js",
   "license": "MIT",
   "author": {
