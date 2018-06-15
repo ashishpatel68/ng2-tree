@@ -361,6 +361,8 @@ export class Tree {
    * @returns {boolean} A flag indicating whether or not this tree has a left menu.
    */
   public hasLeftMenu(): boolean {
+    // return !get(this.node.settings, 'static', false) && get(this.node.settings, 'leftMenu', false);
+    // FORKED we want a menu even if static.. esp so no drag
     return !get(this.node.settings, 'static', false) && get(this.node.settings, 'leftMenu', false);
   }
 
@@ -393,6 +395,8 @@ export class Tree {
    * @returns {boolean} A flag indicating whether or not this tree has a custom menu.
    */
   public hasCustomMenu(): boolean {
+    // return !this.isStatic() && !!get(this.node.settings, 'menuItems', false);
+    // FORKED we want a menu even if static.. esp so no drag
     return !this.isStatic() && !!get(this.node.settings, 'menuItems', false);
   }
   /**
