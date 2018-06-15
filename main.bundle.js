@@ -2580,6 +2580,8 @@ var Tree = (function () {
      * @returns {boolean} A flag indicating whether or not this tree has a left menu.
      */
     Tree.prototype.hasLeftMenu = function () {
+        // return !get(this.node.settings, 'static', false) && get(this.node.settings, 'leftMenu', false);
+        // FORKED we want a menu even if static.. esp so no drag
         return !Object(__WEBPACK_IMPORTED_MODULE_0__utils_fn_utils__["b" /* get */])(this.node.settings, 'static', false) && Object(__WEBPACK_IMPORTED_MODULE_0__utils_fn_utils__["b" /* get */])(this.node.settings, 'leftMenu', false);
     };
     /**
@@ -2612,6 +2614,8 @@ var Tree = (function () {
      * @returns {boolean} A flag indicating whether or not this tree has a custom menu.
      */
     Tree.prototype.hasCustomMenu = function () {
+        // return !this.isStatic() && !!get(this.node.settings, 'menuItems', false);
+        // FORKED we want a menu even if static.. esp so no drag
         return !this.isStatic() && !!Object(__WEBPACK_IMPORTED_MODULE_0__utils_fn_utils__["b" /* get */])(this.node.settings, 'menuItems', false);
     };
     /**
