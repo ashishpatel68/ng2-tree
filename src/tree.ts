@@ -363,7 +363,7 @@ export class Tree {
   public hasLeftMenu(): boolean {
     // return !get(this.node.settings, 'static', false) && get(this.node.settings, 'leftMenu', false);
     // FORKED we want a menu even if static.. esp so no drag
-    return !get(this.node.settings, 'static', false) && get(this.node.settings, 'leftMenu', false);
+    return get(this.node.settings, 'leftMenu', false);
   }
 
   /**
@@ -397,7 +397,7 @@ export class Tree {
   public hasCustomMenu(): boolean {
     // return !this.isStatic() && !!get(this.node.settings, 'menuItems', false);
     // FORKED we want a menu even if static.. esp so no drag
-    return !this.isStatic() && !!get(this.node.settings, 'menuItems', false);
+    return !!get(this.node.settings, 'menuItems', false);
   }
   /**
    * Check whether this tree is "Branch" or not. "Branch" is a node that has children.
